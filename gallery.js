@@ -65,7 +65,6 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-console.log(gallery);
 
 const fragment = document.createDocumentFragment();
 
@@ -95,11 +94,9 @@ gallery.addEventListener("click", onGalleryClick);
 
 function onGalleryClick(event) { 
     event.preventDefault();
-    console.log("Prevent çalıştı....");
 
     const clickedLink = event.target.classList.contains("gallery-image");
     if (!clickedLink) {
-        console.log("gallery-image değil...");
         return;
     }
     const originalImage = event.target.dataset.source;
